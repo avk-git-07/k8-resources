@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-lb
+spec:
+  type: LoadBalancer
+  selector:
+    project: expense
+    module: backend
+    environment: dev 
+  ports:
+  - name: nginx-lb-port
+    protocol: TCP
+    port: 80 # this port number is belongs to this service
+    targetPort: 80 # this is target containr's port
