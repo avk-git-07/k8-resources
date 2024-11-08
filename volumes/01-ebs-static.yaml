@@ -21,7 +21,7 @@ spec:
   #             values:
   #               - us-east-2c 
   ---
-  apiVersion: v1
+apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: ebs-static-claim
