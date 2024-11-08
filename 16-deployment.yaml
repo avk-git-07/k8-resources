@@ -2,12 +2,12 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx
-  labels: # these are replica set labels
+  labels: # these are deployment labels
     app: nginx
     tier: frontend
 spec:
   # modify replicas according to your case
-  replicas: 10
+  replicas: 3
   selector:
   # these are used to select the pod to create it's replicas
     matchLabels: 
