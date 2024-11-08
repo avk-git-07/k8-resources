@@ -20,7 +20,7 @@ spec:
   #             operator: In
   #             values:
   #               - us-east-2c 
-  ---
+---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
