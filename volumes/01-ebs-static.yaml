@@ -33,7 +33,7 @@ spec:
   resources:
     requests:
       storage: 5Gi # this should be less than or equals to PV's storage
----
+#---
 # apiVersion: v1
 # kind: Pod
 # metadata:
