@@ -10,7 +10,7 @@ spec:
   csi:
     driver: ebs.csi.aws.com
     fsType: ext4
-    volumeHandle: vol-02c68eeaab823fd81
+    volumeHandle: vol-005842ab07cfc5e59
 
   # nodeAffinity:
   #   required:
@@ -20,19 +20,19 @@ spec:
   #             operator: In
   #             values:
   #               - us-east-2c 
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: ebs-static-claim
-spec:
-  storageClassName: "" # Empty string must be explicitly set otherwise default StorageClass will be set
-  volumeName: ebs-static
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 5Gi # this should be less than or equals to PV's storage
+# ---
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: ebs-static-claim
+# spec:
+#   storageClassName: "" # Empty string must be explicitly set otherwise default StorageClass will be set
+#   volumeName: ebs-static
+#   accessModes:
+#     - ReadWriteOnce
+#   resources:
+#     requests:
+#       storage: 5Gi # this should be less than or equals to PV's storage
 #---
 # apiVersion: v1
 # kind: Pod
