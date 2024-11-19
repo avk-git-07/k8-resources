@@ -27,20 +27,20 @@ spec:
   - name: efs-dynamic
     persistentVolumeClaim:
       claimName: efs-dynamic-claim
-# ---
-# apiVersion: v1
-# kind: Service
-# metadata:
-#   name: nginx-lb
-# spec:
-#   type: LoadBalancer
-#   selector:
-#     purpose: efs-dynamic
-#   ports:
-#   - name: nginx-lb-port
-#     protocol: TCP
-#     port: 80 # this port number is belongs to this service
-#     targetPort: 80 # this is target containr's port
-#     nodePort: 30007
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-lb
+spec:
+  type: LoadBalancer
+  selector:
+    purpose: efs-dynamic
+  ports:
+  - name: nginx-lb-port
+    protocol: TCP
+    port: 80 # this port number is belongs to this service
+    targetPort: 80 # this is target containr's port
+    nodePort: 30007
 
     
